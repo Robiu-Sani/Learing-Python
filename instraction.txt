@@ -1,0 +1,2 @@
+1. first download and  install python 
+2. check in cmd by command python or py
