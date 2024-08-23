@@ -6,6 +6,12 @@
 # print(student)
 
 # data type 
-# 1. string 
+# 1. string => string is must be in single code ='', or dubble code = "", or three code = """ """
 # 2. intizer
 # 3. bolean   (True , False)
+
+
+# extra value prient = \"
+# for new line = \n 
+# conmection = "robius" + "sani" 
+# formating string = f"any text {var name} any text {other var name} "
