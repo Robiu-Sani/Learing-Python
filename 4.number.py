@@ -1,48 +1,19 @@
-# len() ফাংশন একটি স্ট্রিং বা অন্য কোনো iterable এর দৈর্ঘ্য পরিমাপ করে
-name = 'robius sani'
-print(len(name))  # এটি 11 দেখাবে, কারণ 'robius sani' তে 11টি ক্যারেক্টার আছে
+num1 = 7  #integer
+num2 = 2.5 #float
 
-# name[4] স্ট্রিং এর পঞ্চম ক্যারেক্টার দেখাবে
-print(name[4])  # এটি 'u' দেখাবে, কারণ এটি 'robius sani' এর 5 নম্বর ক্যারেক্টার
-
-# name[-1] স্ট্রিং এর শেষ ক্যারেক্টার দেখাবে
-print(name[-1])  # এটি 'i' দেখাবে, কারণ এটি শেষ ক্যারেক্টার
-
-# name[0:5] স্ট্রিং এর প্রথম থেকে চতুর্থ ক্যারেক্টার পর্যন্ত দেখাবে
-print(name[0:5])  # এটি 'robiu' দেখাবে, কারণ এটি প্রথম 5টি ক্যারেক্টার
-
-# ----------- স্ট্রিং ফাংশন -------------
-
-# name.upper() স্ট্রিং এর সব ক্যারেক্টারকে uppercase এ পরিবর্তন করবে
-print(name.upper())  # এটি 'ROBIUS SANI' দেখাবে
-
-# name.lower() স্ট্রিং এর সব ক্যারেক্টারকে lowercase এ পরিবর্তন করবে
-print(name.lower())  # এটি 'robius sani' দেখাবে
-
-# name.title() প্রতিটি শব্দের প্রথম অক্ষরকে uppercase এ পরিবর্তন করবে
-print(name.title())  # এটি 'Robius Sani' দেখাবে
-
-# name.strip() স্ট্রিং এর শুরু এবং শেষে থাকা অতিরিক্ত স্পেসগুলো সরিয়ে দেবে
-print(name.strip())  # যদি স্ট্রিং এর আগে বা পরে স্পেস থাকে, তাহলে সেটি সরিয়ে 'robius sani' দেখাবে
-
-# name.lstrip() স্ট্রিং এর বাম দিকের অতিরিক্ত স্পেস সরিয়ে দেবে
-print(name.lstrip())  # বাম দিকের স্পেস সরিয়ে 'robius sani' দেখাবে
-
-# name.rstrip() স্ট্রিং এর ডান দিকের অতিরিক্ত স্পেস সরিয়ে দেবে
-print(name.rstrip())  # ডান দিকের স্পেস সরিয়ে 'robius sani' দেখাবে
-
-# name.find("us") স্ট্রিং এর মধ্যে "us" এর অবস্থান (ইনডেক্স) দেখাবে; যদি না পাওয়া যায়, তাহলে -1 দেখাবে
-print(name.find("us"))  # এটি 4 দেখাবে, কারণ "us" শুরু হয়েছে 5 নম্বর ক্যারেক্টার থেকে
-
-# name.replace("us", "dgdfsdf") স্ট্রিং এর "us" কে "dgdfsdf" দিয়ে প্রতিস্থাপন করবে
-print(name.replace("us", "dgdfsdf"))  # এটি 'robidgdfsdf sani' দেখাবে
-
-# "sani" in name চেক করবে যে "sani" স্ট্রিং এর মধ্যে আছে কিনা; এটি True বা False দেখাবে
-print("sani" in name)  # এটি True দেখাবে, কারণ "sani" স্ট্রিং এর মধ্যে আছে
+print(num1 + num2) # add
+print(num1 - num2) # subtract
+print(num1 * num2) # multiply
+print(num1 / num2) # division
+print(num1 // num2) # when two int are divied result in init
+print(num1 ** num2) # power
+print(num1 % num2) # remainder
+num1 *= 5 # shortcat of num1 = num1 + 5
+print(num1 )
 
 
 
-# --------------- all metch function ----------------------- 
+# match function ----------- 
 import math
 
 # round() ফাংশন 2.6 কে কাছাকাছি পূর্ণসংখ্যা 3 এ রাউন্ড করবে

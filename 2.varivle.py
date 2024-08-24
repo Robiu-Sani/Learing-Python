@@ -7,7 +7,7 @@
 
 # data type 
 # 1. string => string is must be in single code ='', or dubble code = "", or three code = """ """
-# 2. intizer
+# 2. number or numarick = integer=>5 float=> 2.5
 # 3. bolean   (True , False)
 
 
@@ -15,3 +15,5 @@
 # for new line = \n 
 # conmection = "robius" + "sani" 
 # formating string = f"any text {var name} any text {other var name} "
+
+
