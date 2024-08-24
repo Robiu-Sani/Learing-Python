@@ -1,6 +1,7 @@
 # len() ফাংশন একটি স্ট্রিং বা অন্য কোনো iterable এর দৈর্ঘ্য পরিমাপ করে
 name = 'robius sani'
 print(len(name))  # এটি 11 দেখাবে, কারণ 'robius sani' তে 11টি ক্যারেক্টার আছে
+print(type(name))
 
 # name[4] স্ট্রিং এর পঞ্চম ক্যারেক্টার দেখাবে
 print(name[4])  # এটি 'u' দেখাবে, কারণ এটি 'robius sani' এর 5 নম্বর ক্যারেক্টার

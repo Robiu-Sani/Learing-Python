@@ -1,0 +1,5 @@
+a = input()
+print(a)
+b = input("enter you name :")
+print(b)
+print(f"the name is {b}")
