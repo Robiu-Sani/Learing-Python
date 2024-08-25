@@ -189,3 +189,153 @@ class CustomClass(metaclass=Meta):
 
 
 # ------------------------ End of the Python file ------------------------
+# inheritance.py
+
+# ------------- Inheritance in Python -------------------
+
+# Inheritance একটি OOP (Object-Oriented Programming) concept, যা parent (বা base) class-এর property এবং methods child (বা derived) class-এ inherit করতে দেয়।
+
+# 1. Basic Inheritance
+# -----------------------
+# নিচের উদাহরণে, `Person` হলো parent class এবং `Student` হলো child class।
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+
+# `Student` class `Person` class থেকে Inherit করেছে।
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)  # Parent class-এর __init__ মেথডকে কল করা হচ্ছে
+        self.student_id = student_id
+
+    def study(self):
+        return f"{self.name} is studying."
+
+# Example usage
+s = Student("Robius", 20, "S1234")
+print(s.greet())  # Output: Hello, my name is Robius and I am 20 years old.
+print(s.study())  # Output: Robius is studying.
+
+# 2. Overriding Methods
+# -----------------------
+# Child class তার parent class-এর method-কে override করতে পারে।
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+
+    # greet() মেথডটি override করা হয়েছে
+    def greet(self):
+        return f"Hi, I'm {self.name}, and I'm a student with ID: {self.student_id}"
+
+# Example usage
+s = Student("Robius", 20, "S1234")
+print(s.greet())  # Output: Hi, I'm Robius, and I'm a student with ID: S1234
+
+# 3. Multiple Inheritance
+# -----------------------
+# Python-এ একাধিক parent class থেকে inherit করা যায়।
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+
+class Worker:
+    def __init__(self, job_title):
+        self.job_title = job_title
+
+    def work(self):
+        return f"I work as a {self.job_title}."
+
+# `Employee` class, `Person` এবং `Worker` দুটি class থেকে inherit করেছে।
+class Employee(Person, Worker):
+    def __init__(self, name, age, job_title):
+        Person.__init__(self, name, age)
+        Worker.__init__(self, job_title)
+
+# Example usage
+e = Employee("Robius", 30, "Software Developer")
+print(e.greet())  # Output: Hello, my name is Robius and I am 30 years old.
+print(e.work())   # Output: I work as a Software Developer.
+
+# 4. The `super()` Function
+# -----------------------
+# `super()` function Parent class-এর কোনো method বা attribute কে Child class থেকে access করার জন্য ব্যবহৃত হয়।
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)  # `super()` দিয়ে Parent class এর __init__ মেথড কল করা হয়েছে
+        self.student_id = student_id
+
+    def greet(self):
+        parent_greet = super().greet()  # Parent class এর greet মেথড ব্যবহার করে
+        return f"{parent_greet} I am a student with ID: {self.student_id}."
+
+# Example usage
+s = Student("Robius", 20, "S1234")
+print(s.greet())  # Output: Hello, my name is Robius and I am 20 years old. I am a student with ID: S1234.
+
+# 5. Inheritance Hierarchy
+# -----------------------
+# Inheritance-এ একটি class অন্য class থেকে inherit করতে পারে, যা একটি শ্রেণিবদ্ধ কাঠামো তৈরি করে।
+
+class Animal:
+    def sound(self):
+        return "Some sound"
+
+class Dog(Animal):
+    def sound(self):
+        return "Bark"
+
+class Bulldog(Dog):
+    def sound(self):
+        return "Bulldog Bark"
+
+# Example usage
+dog = Dog()
+bulldog = Bulldog()
+print(dog.sound())      # Output: Bark
+print(bulldog.sound())  # Output: Bulldog Bark
+
+# 6. Checking Inheritance with `isinstance()` and `issubclass()`
+# -----------------------
+# `isinstance()` দিয়ে কোনো object নির্দিষ্ট class-এর instance কিনা চেক করা হয়।
+# `issubclass()` দিয়ে কোনো class নির্দিষ্ট অন্য class-এর subclass কিনা চেক করা হয়।
+
+class Animal:
+    pass
+
+class Dog(Animal):
+    pass
+
+d = Dog()
+print(isinstance(d, Dog))        # Output: True
+print(isinstance(d, Animal))     # Output: True
+print(issubclass(Dog, Animal))   # Output: True
+print(issubclass(Animal, Dog))   # Output: False
