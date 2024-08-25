@@ -112,7 +112,9 @@ print(type(unique_numbers))  # Output: <class 'set'>
 
 ```
 ```
-# Converting float to int
+
+```
+
 num = int(3.14)
 print(num)  # Output: 3
 
